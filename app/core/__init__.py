@@ -1,0 +1,1 @@
+# Core module (e.g., database config).
