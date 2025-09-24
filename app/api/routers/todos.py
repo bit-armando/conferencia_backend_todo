@@ -43,7 +43,7 @@ def update_todo_endpoint(todo_id: int, payload: TodoUpdate, db: Session = Depend
 
 
 @router.delete("/{todo_id}", status_code=status.HTTP_204_NO_CONTENT)
-def delete_todo(todo_id: int, db: Session = Depends(get_db)):
+def delete_todo_endpoint(todo_id: int, db: Session = Depends(get_db)):
     """Delete a todo by id. Returns 204 if successful."""
     delete_todo(db, todo_id)
     return None
