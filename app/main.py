@@ -17,14 +17,15 @@ app = FastAPI(title="Todo API", version="1.0.0")
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",    # React default
-        "http://localhost:5173",    # Vite default
-        "http://localhost:4200",    # Angular default
-        "http://127.0.0.1:3000",    # Alternative localhost
-        "http://127.0.0.1:5173",    # Alternative localhost
-        "http://127.0.0.1:4200",    # Alternative localhost
-    ],
+    allow_origins=['*'],
+    # allow_origins=[
+    #     "http://localhost:3000",    # React default
+    #     "http://localhost:5173",    # Vite default
+    #     "http://localhost:4200",    # Angular default
+    #     "http://127.0.0.1:3000",    # Alternative localhost
+    #     "http://127.0.0.1:5173",    # Alternative localhost
+    #     "http://127.0.0.1:4200",    # Alternative localhost
+    # ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
